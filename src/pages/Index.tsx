@@ -10,7 +10,7 @@ import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
-  // Define the sections for the menu navigation
+  // Define the sections for the menu navigation, removing 'contact' as it will be handled differently
   const sections = ['home', 'about', 'experience', 'skills', 'education', 'contact'];
   
   return (

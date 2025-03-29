@@ -17,6 +17,10 @@ const HeroSection: React.FC = () => {
     document.body.removeChild(link);
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511973297563', '_blank');
+  };
+
   return (
     <section 
       id="home" 
@@ -37,7 +41,7 @@ const HeroSection: React.FC = () => {
             <Button onClick={handleDownloadCV} className="w-full md:w-auto">
               Download CV
             </Button>
-            <Button variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="w-full md:w-auto">
+            <Button variant="outline" onClick={openWhatsApp} className="w-full md:w-auto">
               {t('nav.contact')}
             </Button>
           </div>
