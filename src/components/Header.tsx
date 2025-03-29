@@ -24,9 +24,14 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
 
   // Function to scroll to section
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Special case for contact section - if it's contact, open WhatsApp
+    if (sectionId === 'contact') {
+      window.open('https://wa.me/5511973297563', '_blank');
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -43,13 +48,15 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
 
       // Update active section based on scroll position
       sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const { top, bottom } = element.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-          
-          if (top < windowHeight / 2 && bottom > windowHeight / 2) {
-            setActiveSection(section);
+        if (section !== 'contact') { // Skip contact section for active highlighting
+          const element = document.getElementById(section);
+          if (element) {
+            const { top, bottom } = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (top < windowHeight / 2 && bottom > windowHeight / 2) {
+              setActiveSection(section);
+            }
           }
         }
       });

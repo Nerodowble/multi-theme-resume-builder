@@ -8,8 +8,13 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   const handleDownloadCV = () => {
-    // This would be implemented with actual CV file
-    alert('Download CV functionality would be here');
+    // Create a link element to download the CV
+    const link = document.createElement('a');
+    link.href = '/willian-vidal-lima-cv.pdf';
+    link.download = 'willian-vidal-lima-cv.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
