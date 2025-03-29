@@ -21,18 +21,31 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Format the WhatsApp message with line breaks and form data
+    const whatsappText = encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`
+    );
+    
+    // Create the WhatsApp URL with the message
+    const whatsappUrl = `https://wa.me/5511973297563/?text=${whatsappText}`;
+    
+    // Show toast notification
+    toast({
+      title: t('contact.success'),
+      description: `${name}, ${t('contact.messageSent')}`,
+    });
+    
+    // Wait a moment to show the toast before redirecting
     setTimeout(() => {
-      toast({
-        title: t('contact.success'),
-        description: `${name}, your message has been sent.`,
-      });
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
       
+      // Reset the form
       setName('');
       setEmail('');
       setMessage('');
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -110,7 +123,7 @@ const ContactSection: React.FC = () => {
               </div>
               
               <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : t('contact.send')}
+                {isSubmitting ? t('contact.sending') : t('contact.send')}
               </Button>
             </form>
           </CardContent>
