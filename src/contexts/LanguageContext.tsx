@@ -67,7 +67,7 @@ const defaultTranslations: Record<string, Record<Language, string>> = {
   },
   'about.summary': {
     en: 'Quality Analyst (QA) at Legalbot, with experience in manual and automated software testing. Seeking transition to Junior Full Stack Developer, using my knowledge in Python, React, MongoDB and other technologies. Studying Systems Analysis and Development at São Judas Tadeu University (expected completion 06/2025) and Software Programming technician at ETEC Adolpho Berezin. Solid skills in agile methodologies and teamwork, with availability for remote work and continuous desire for learning and technical improvement.',
-    pt: 'Analista de Qualidade (QA) na Legalbot, com experiência em testes manuais e automatizados de software. Busco transição para Desenvolvedor Full Stack Júnior, utilizando meus conhecimentos em Python, React, MongoDB e outras tecnologias. Em formação em Análise e Desenvolvimento de Sistemas pela Universidade São Judas Tadeu (conclusão prevista para 06/2025) e técnico em Programação de Softwares pela ETEC Adolpho Berezin. Habilidades sólidas em metodologias ágeis e trabalho em equipe, com disponibilidade para trabalho remoto e desejo contínuo de aprendizado e aprimoramento técnico.',
+    pt: 'Analista de Qualidade (QA) na Legalbot, com experiência em testes manuais e automatizados de software.\n\nBusco transição para Desenvolvedor Full Stack Júnior, utilizando meus conhecimentos em Python, React, MongoDB e outras tecnologias.\n\nEm formação em Análise e Desenvolvimento de Sistemas pela Universidade São Judas Tadeu (conclusão prevista para 06/2025) e técnico em Programação de Softwares pela ETEC Adolpho Berezin.\n\nHabilidades sólidas em metodologias ágeis e trabalho em equipe, com disponibilidade para trabalho remoto e desejo contínuo de aprendizado e aprimoramento técnico.',
     es: 'Analista de Calidad (QA) en Legalbot, con experiencia en pruebas manuales y automatizadas de software. Busco la transición a Desarrollador Full Stack Junior, utilizando mis conocimientos en Python, React, MongoDB y otras tecnologías. Estudiando Análisis y Desarrollo de Sistemas en la Universidad São Judas Tadeu (finalización prevista para 06/2025) y técnico en Programación de Software en ETEC Adolpho Berezin. Habilidades sólidas en metodologías ágiles y trabajo en equipo, con disponibilidad para trabajo remoto y deseo continuo de aprendizaje y mejora técnica.'
   },
   'about.objective.title': {
@@ -336,6 +336,33 @@ const defaultTranslations: Record<string, Record<Language, string>> = {
     en: 'Made with',
     pt: 'Feito com',
     es: 'Hecho con'
+  },
+  
+  // Language Modal
+  'languageModal.title': {
+    en: 'Choose your language',
+    pt: 'Escolha seu idioma',
+    es: 'Elige tu idioma'
+  },
+  'themeModal.title': {
+    en: 'Choose your theme',
+    pt: 'Escolha seu tema',
+    es: 'Elige tu tema'
+  },
+  'themeModal.light': {
+    en: 'Light',
+    pt: 'Claro',
+    es: 'Claro'
+  },
+  'themeModal.dark': {
+    en: 'Dark',
+    pt: 'Escuro',
+    es: 'Oscuro'
+  },
+  'modal.continue': {
+    en: 'Continue',
+    pt: 'Continuar',
+    es: 'Continuar'
   }
 };
 

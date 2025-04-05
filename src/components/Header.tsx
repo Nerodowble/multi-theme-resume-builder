@@ -83,16 +83,18 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
           ))}
           
           {/* Language Selector */}
-          <div className="relative ml-4 flex items-center">
-            <Button 
-              variant="ghost" 
-              size="icon"
-              className="text-muted-foreground hover:text-foreground"
-              onClick={() => setLanguage(language === 'en' ? 'pt' : language === 'pt' ? 'es' : 'en')}
-            >
-              <Globe className="h-5 w-5" />
-              <span className="ml-2 text-xs font-bold">{language.toUpperCase()}</span>
-            </Button>
+          <div className="ml-4 flex items-center space-x-1 border border-border rounded-md p-0.5">
+            {(['en', 'pt', 'es'] as Language[]).map((lang) => (
+              <Button
+                key={lang}
+                variant={language === lang ? 'secondary' : 'ghost'}
+                size="sm"
+                className="px-2 h-7 text-xs" // Ajuste de padding e altura
+                onClick={() => handleLanguageChange(lang)}
+              >
+                {lang.toUpperCase()}
+              </Button>
+            ))}
           </div>
           
           {/* Theme Toggle */}
